@@ -7,9 +7,12 @@
   "license": "ISC",
   "description": "Criando API REST com Node.js",
   "devDependencies": {
+    "@types/node": "^22.14.1",
     "eslint": "^9.25.1",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-prettier": "^5.2.6",
-    "prettier": "^3.5.3"
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   }
 }

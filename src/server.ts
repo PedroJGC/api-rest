@@ -14,7 +14,11 @@ app.get('/products', (request, response) => {
 app.post('/products', (request, response) => {
   const { name, price } = request.body;
 
-  response.send(`Produto ${name} custa ${price}`);
+  // response.send(`Produto ${name} custa ${price}`);
+
+  // status code: response.status(201).json({ name, price });
+
+  response.json({ name, price });
 });
 
 app.listen(PORT, () => console.log(`Server running at ${PORT}`));

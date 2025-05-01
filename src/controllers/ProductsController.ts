@@ -18,6 +18,9 @@ class ProductsController {
   create(request: Request, response: Response) {
     const { name, price } = request.body;
 
+    // exemplo de erro
+    throw new Error('Erro ao tentar criar um produto!');
+
     response.json({ name, price, user_id: request.user_id });
   }
 }

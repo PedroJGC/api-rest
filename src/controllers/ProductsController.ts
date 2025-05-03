@@ -1,4 +1,5 @@
 import { Request, Response } from 'express';
+import { AppError } from '../utils/AppError';
 
 class ProductsController {
   /**
@@ -19,7 +20,8 @@ class ProductsController {
     const { name, price } = request.body;
 
     // exemplo de erro
-    throw new Error('Erro ao tentar criar um produto!');
+    // throw new Error('Erro ao tentar criar um produto!');
+    // throw new AppError('Erro ao tentar criar um produto!');
 
     response.json({ name, price, user_id: request.user_id });
   }

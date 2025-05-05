@@ -2,7 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 
 import { routes } from './routes';
 
-import { AppError } from './utils/AppError';
+import { AppError } from './utils/app-error';
 
 const PORT = 3333;
 

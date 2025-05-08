@@ -19,8 +19,13 @@ class ProductsController {
 
   create(request: Request, response: Response) {
     const bodySchema = z.object({
-      name: z.string({ required_error: 'Name is required!' }),
-      price: z.number({ required_error: 'Price is required!' }),
+      name: z
+        .string({ required_error: 'Name is required!' })
+        .trim()
+        .min(6, { message: 'Name must be 6 or more characters!' }),
+      price: z
+        .number({ required_error: 'Price is required!' })
+        .positive({ message: 'Price must be positive!' }),
       // Poderia usar o nullish() para que o campo não fosse obrigatório.
       // price: z.number().nullish(),
     });

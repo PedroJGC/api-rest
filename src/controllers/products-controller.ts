@@ -21,6 +21,8 @@ class ProductsController {
     const bodySchema = z.object({
       name: z.string(),
       price: z.number(),
+      // Poderia usar o nullish() para que o campo não fosse obrigatório.
+      // price: z.number().nullish(),
     });
 
     const { name, price } = bodySchema.parse(request.body);
